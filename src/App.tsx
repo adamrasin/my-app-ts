@@ -19,7 +19,7 @@ const Greeting: React.FC<GreetingProps> = ({ name, age }) => {
 
 const App: React.FC = () => {
   const [name, setName] = useState<string>('John');
-  const [age, setAge] = useState<number | null>(null); // Typování stavů
+  const [age, setAge] = useState<number | null>(null); 
 
   return (
     <div className="App">
@@ -31,24 +31,18 @@ const App: React.FC = () => {
 
 // 1
 
-// Explicitní definice proměnných s různými typy
-
-// 1. String (řetězec)
 let myString: string = "Ahoj, světě!";
 
-// 2. Number (číslo)
 let myNumber: number = 42;
 
-// 3. Boolean (pravda/nepravda)
 let isTypeScriptAwesome: boolean = true;
 
-// 4. Pole čísel (array of numbers)
 let myNumberArray: number[] = [1, 2, 3, 4, 5];
 
-console.log(myString);           // Výstup: Ahoj, světe!
-console.log(myNumber);            // Výstup: 42
-console.log(isTypeScriptAwesome); // Výstup: true
-console.log(myNumberArray);       // Výstup: [1, 2, 3, 4, 5]
+console.log(myString);         
+console.log(myNumber);            
+console.log(isTypeScriptAwesome); 
+console.log(myNumberArray);      
 
 function multiply(a: number, b: number):number {
   return a * b;
@@ -57,22 +51,18 @@ function multiply(a: number, b: number):number {
 const result = multiply(5, 3);
 console.log(result);
 
-// Funkce multiply s volitelným parametrem showResult
 function multiply2(a: number, b: number, showResult?: boolean): number {
   const result = a * b;
   
-  // Pokud je showResult pravdivé, vypíše výsledek do konzole
   if (showResult) {
     console.log(result);
   }
 
-  // Vrací výsledek vždy, bez ohledu na showResult
   return result;
 }
 
-// Test funkce
-const result1 = multiply2(5, 3, true);  // Vypíše do konzole a vrátí 15
-const result2 = multiply2(4, 2);        // Pouze vrátí 8, nevypíše nic
+const result1 = multiply2(5, 3, true);  
+const result2 = multiply2(4, 2);     
 
 //2
 
@@ -105,8 +95,8 @@ function greet(name: string, greeting: string = "Hello"): string {
   return `${greeting}, ${name}!`;
 }
 
-const greeting1 = greet("Tomáš"); // Výstup: "Hello, Tomáš!"
-const greeting2 = greet("Tomáš", "Ahoj"); // Výstup: "Ahoj, Tomáš!"
+const greeting1 = greet("Tomáš"); 
+const greeting2 = greet("Tomáš", "Ahoj"); 
 
 console.log(greeting1);
 console.log(greeting2);
